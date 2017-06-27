@@ -1,9 +1,11 @@
 import java.util.ArrayList;
 
 public class Photographer {
+  private String name;
   private ArrayList<Camera> cameras;
 
-  public Photographer() {
+  public Photographer(String name) {
+    this.name = name;
     this.cameras = new ArrayList<Camera>();
   }
 
@@ -13,5 +15,11 @@ public class Photographer {
 
   public void addCamera(Camera camera) {
     cameras.add(camera);
+  }
+
+  public void removeCamera() {
+    if (camerasCount() > 0) {
+      cameras.remove(0);
+    }
   }
 }

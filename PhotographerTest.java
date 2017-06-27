@@ -8,13 +8,21 @@ public class PhotographerTest{
 
   @Before
   public void before() {
-    photographer = new Photographer();
+    photographer = new Photographer("Frank");
     camera = new Camera();
   }
 
   @Test
   public void canAddCamera() {
     photographer.addCamera(camera);
+    assertEquals(1, photographer.camerasCount());
+  }
+
+  @Test
+  public void canRemoveCamera() {
+    photographer.addCamera(camera);
+    photographer.addCamera(camera);
+    photographer.removeCamera();
     assertEquals(1, photographer.camerasCount());
   }
 
