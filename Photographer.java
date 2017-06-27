@@ -9,6 +9,10 @@ public class Photographer {
     this.cameras = new ArrayList<Camera>();
   }
 
+  public String getName() {
+    return this.name;
+  }
+
   public int camerasCount() {
     return cameras.size();
   }
