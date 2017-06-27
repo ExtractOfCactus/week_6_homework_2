@@ -17,6 +17,11 @@ public class PhotographerTest{
     assertEquals("Frank", photographer.getName());
   }
 
+  @Test 
+  public void camerasIsEmpty() {
+    assertEquals(0, photographer.camerasCount());
+  }
+
   @Test
   public void canAddCamera() {
     photographer.addCamera(camera);
