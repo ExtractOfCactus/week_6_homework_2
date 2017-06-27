@@ -7,5 +7,11 @@ public class Photographer {
     this.cameras = new ArrayList<Camera>();
   }
 
-  
+  public int camerasCount() {
+    return cameras.size();
+  }
+
+  public void addCamera(Camera camera) {
+    cameras.add(camera);
+  }
 }
