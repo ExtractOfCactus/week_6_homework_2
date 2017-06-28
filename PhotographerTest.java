@@ -65,4 +65,12 @@ public class PhotographerTest{
     assertEquals(1, photographer.countJournalEntries());
   }
 
+  @Test
+  public void canGetNumberOfPhotos() {
+    photographer.addJournalEntry("Monday", 3);
+    photographer.addJournalEntry("Tuesday", 2);
+    photographer.addJournalEntry("Wednesday", 6);
+    assertEquals(11, photographer.numberOfPhotos());
+  }
+
 }
