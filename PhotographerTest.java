@@ -47,14 +47,14 @@ public class PhotographerTest{
     assertEquals("Nikon, sharp focus, high-end.", digitalCamera1.printDetails());
   }
 
-  // @Test
-  // public void canGetDetailsOfWholeCameraCollection() {
-  //   photographer.addCamera(analogCamera1);
-  //   photographer.addCamera(analogCamera2);
-  //   photographer.addCamera(digitalCamera1);
-  //   photographer.addCamera(digitalCamera2);
-  //   String expected = "Kodak, plastic and disposable. Evian, red-eye removal, disposable. Nikon, sharp focus, high-end. Fukishima, shake-elimination, paneramic abilites.";
-  //   assertEquals(expected, photographer.cameraDetails());
-  // }
+  @Test
+  public void canGetDetailsOfWholeCameraCollection() {
+    photographer.addCamera(analogCamera1);
+    photographer.addCamera(analogCamera2);
+    photographer.addCamera(digitalCamera1);
+    photographer.addCamera(digitalCamera2);
+    String expected = "Kodak, plastic and disposable. Evian, red-eye removal, disposable. Nikon, sharp focus, high-end. Fukishima, shake-elimination, paneramic abilites. ";
+    assertEquals(expected, photographer.cameraDetails());
+  }
 
 }

@@ -30,7 +30,7 @@ public class Photographer {
   public String cameraDetails() {
     String allDetails = "";
     for (Camera camera : this.cameras) {
-      allDetails += camera.printDetails();
+      allDetails += camera.printDetails() + " ";
     }
     return allDetails;
   }
