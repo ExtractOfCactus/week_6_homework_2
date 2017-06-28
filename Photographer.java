@@ -47,9 +47,9 @@ public class Photographer {
     return journal.size();
   }
 
-  public Integer numberOfPhotos() {
-    Integer totalPhotos = 0;
-    for (Integer values : this.journal.values()) {
+  public int numberOfPhotos() {
+    int totalPhotos = 0;
+    for (int values : this.journal.values()) {
       totalPhotos += values;
     }
     return totalPhotos;
