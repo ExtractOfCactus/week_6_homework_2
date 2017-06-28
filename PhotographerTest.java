@@ -12,10 +12,10 @@ public class PhotographerTest{
   @Before
   public void before() {
     photographer = new Photographer("Frank");
-    analogCamera1 = new AnalogCamera("Kodak, plastic and disposable");
-    analogCamera2 = new AnalogCamera("Evian, red-eye removal, disposable");
-    digitalCamera1 = new DigitalCamera("Nikon, sharp focus, high-end");
-    digitalCamera2 = new DigitalCamera("Fukishima, shake-elimination, paneramic abilites");
+    analogCamera1 = new AnalogCamera("Kodak, plastic and disposable.");
+    analogCamera2 = new AnalogCamera("Evian, red-eye removal, disposable.");
+    digitalCamera1 = new DigitalCamera("Nikon, sharp focus, high-end.");
+    digitalCamera2 = new DigitalCamera("Fukishima, shake-elimination, paneramic abilites.");
   }
 
   @Test
@@ -41,5 +41,20 @@ public class PhotographerTest{
     photographer.removeCamera();
     assertEquals(1, photographer.camerasCount());
   }
+
+  @Test
+  public void cameraHasDetails() {
+    assertEquals("Nikon, sharp focus, high-end.", digitalCamera1.printDetails());
+  }
+
+  // @Test
+  // public void canGetDetailsOfWholeCameraCollection() {
+  //   photographer.addCamera(analogCamera1);
+  //   photographer.addCamera(analogCamera2);
+  //   photographer.addCamera(digitalCamera1);
+  //   photographer.addCamera(digitalCamera2);
+  //   String expected = "Kodak, plastic and disposable. Evian, red-eye removal, disposable. Nikon, sharp focus, high-end. Fukishima, shake-elimination, paneramic abilites.";
+  //   assertEquals(expected, photographer.cameraDetails());
+  // }
 
 }

@@ -26,4 +26,12 @@ public class Photographer {
       cameras.remove(0);
     }
   }
+
+  public String cameraDetails() {
+    String allDetails = "";
+    for (Camera camera : this.cameras) {
+      allDetails += camera.printDetails();
+    }
+    return allDetails;
+  }
 }
