@@ -3,13 +3,13 @@ import java.util.HashMap;
 
 public class Photographer {
   private String name;
-  private ArrayList<Camera> cameras;
+  private ArrayList<Printable> cameras;
   private HashMap<String, Integer> journal;
 
 
   public Photographer(String name) {
     this.name = name;
-    this.cameras = new ArrayList<Camera>();
+    this.cameras = new ArrayList<Printable>();
     this.journal = new HashMap<String, Integer>();
   }
 
@@ -21,7 +21,7 @@ public class Photographer {
     return cameras.size();
   }
 
-  public void addCamera(Camera camera) {
+  public void addCamera(Printable camera) {
     cameras.add(camera);
   }
 
@@ -33,7 +33,7 @@ public class Photographer {
 
   public String cameraDetails() {
     String allDetails = "";
-    for (Camera camera : this.cameras) {
+    for (Printable camera : this.cameras) {
       allDetails += camera.printDetails() + " ";
     }
     return allDetails;

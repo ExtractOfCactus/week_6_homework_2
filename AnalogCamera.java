@@ -1,8 +1,12 @@
-class AnalogCamera extends Camera implements Printable {
+class AnalogCamera implements Printable {
   private String details;
 
   public AnalogCamera(String details) {
-    super(details);
+    this.details = details;
+  }
+
+  public String printDetails() {
+    return details;
   }
 
 }
