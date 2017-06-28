@@ -5,8 +5,4 @@ class DigitalCamera extends Camera implements Printable {
     super(details);
   }
 
-  // public String printDetails() {
-  //   return this.details;
-  // }
-
 }

@@ -9,6 +9,7 @@ public class PhotographerTest{
   DigitalCamera digitalCamera1;
   DigitalCamera digitalCamera2;
 
+
   @Before
   public void before() {
     photographer = new Photographer("Frank");
@@ -16,6 +17,7 @@ public class PhotographerTest{
     analogCamera2 = new AnalogCamera("Evian, red-eye removal, disposable.");
     digitalCamera1 = new DigitalCamera("Nikon, sharp focus, high-end.");
     digitalCamera2 = new DigitalCamera("Fukishima, shake-elimination, paneramic abilites.");
+    // journal1 = new HashMap<String, Integer>();
   }
 
   @Test
@@ -55,6 +57,12 @@ public class PhotographerTest{
     photographer.addCamera(digitalCamera2);
     String expected = "Kodak, plastic and disposable. Evian, red-eye removal, disposable. Nikon, sharp focus, high-end. Fukishima, shake-elimination, paneramic abilites. ";
     assertEquals(expected, photographer.cameraDetails());
+  }
+
+  @Test
+  public void canAddKeyValuePairsToJournal() {
+    photographer.addJournalEntry("Monday", 3);
+    assertEquals(1, photographer.countJournalEntries());
   }
 
 }
